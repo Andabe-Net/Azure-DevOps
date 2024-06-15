@@ -22,7 +22,7 @@ The azure resource manager uses the arm template to provision resources needed f
 - the network security group allows setting up security rules that define access to resources within the subnet e.g allowing inbound traffic to 
   a particular port
     
-
+#after connecting to vm with ssh
 #set up jenkins
 
     first install java runtime
