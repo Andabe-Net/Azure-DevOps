@@ -1,0 +1,5 @@
+>> install the azure resource manager tools extension in VS code
+>> create a new json file
+>> type 'arm' (without quotes) and and select arm from the options that show up to set a starter template
+>> navigate to resources area or option of the template configuration and within the [] type 'vm' 
+   for example to get a arm-vm template that you can configure
