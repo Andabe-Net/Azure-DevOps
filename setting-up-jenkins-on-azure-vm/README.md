@@ -1,6 +1,9 @@
 
 #concepts and more
 
+Note>> "A quick way to set up deployment to azure is using the azure resource managr(arm) template, and a quick way to set up an arm-template is using 
+the azure resource manager tools VS code extension."
+
 #create resource group and deploy a virtual machine in it using the arm-template.json file
 
 - az group create --name rg-jenkins-on-azure-vm-eastus --location eastus
