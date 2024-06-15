@@ -1,12 +1,15 @@
 
 #concepts and more
+
 The azure resource manager uses the arm template to provision resources needed for the vm to run, resources include
 -Virtual Network, publicIpAddress, NetworkSecurityGroups, and NetworkInterfaces, from Microsoft.Network namespace
 -storage account, from Microsoft.Storage namespace
 -virtual machine instance itself to run in the virtual Network, from Microsoft.Compute namespace
 
 #architecture and connections
-- the virtual network instance(a public or private address range) is connected with the Network Interface instance which is also attached to the virtual machine. The IP address of the virtual machine is effectively the Ip address of the Network Interface attached to the virtual machine.
+
+- the virtual network instance(a public or private address range) is connected with the Network Interface instance which is also attached to the virtual machine.
+- The IP address of the virtual machine is effectively the Ip address of the Network Interface attached to the virtual machine.
 - the virtual machine exists inside an ip range(subnet) within  the virtual network and the subnet is protected by the network security group
 - the public ip address provides public access to the vm over the internet
     -- e.g connect to vm via SSH with >> ssh username@public_ip
@@ -15,6 +18,7 @@ The azure resource manager uses the arm template to provision resources needed f
     
 
 #set up jenkins
+
     first install java runtime
         update package list
             >> sudo apt update
@@ -25,6 +29,7 @@ The azure resource manager uses the arm template to provision resources needed f
     Install jenkins
         >> sudo apt install jenkins
 #access jenkins
+
     -create an inbound port rule in the network security group of the subnet that allows inbound traffic to port  8080 where jenkin 
     -copy the public ip address of the virtual machine to access jenkins on port 8080
         >> public_ip:8080
