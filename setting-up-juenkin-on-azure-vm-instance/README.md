@@ -21,7 +21,7 @@ The azure resource manager uses the arm template to provision resources needed f
         Add the OpenJDK PPA (Personal Package Archive)
             >> sudo add-apt-repository ppa:openjdk-r/ppa
         install java
-            >> sudo apt install openjdk-11-jdk
+            >> sudo apt install openjdk-17-jdk
     Install jenkins
         >> sudo apt install jenkins
 #access jenkins
