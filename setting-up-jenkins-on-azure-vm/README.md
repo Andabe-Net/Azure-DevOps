@@ -40,7 +40,7 @@ The azure resource manager uses the arm template to provision resources needed f
         >> sudo apt install jenkins
 #access jenkins
 
-    -create an inbound port rule in the network security group of the subnet that allows inbound traffic to port  8080 where jenkin 
+    -create an inbound port rule in the network security group of the subnet that allows inbound traffic to port  8080 where jenkin runs
     -copy the public ip address of the virtual machine to access jenkins on port 8080
         >> public_ip:8080
     jenkins will ask for a passcode which can be found on the virtual machine or server with
