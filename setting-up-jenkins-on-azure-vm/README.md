@@ -2,8 +2,9 @@
 #concepts and more
 
 #create resource group and deploy a virtual machine in it using the arm-template.json file
-az group create --name rg-jenkins-on-azure-vm-eastus --location eastus
-az deployment group create --name rollout1 -g rg-jenkins-on-azure-vm-eastus --template-file arm-template.json -o yaml
+
+>> az group create --name rg-jenkins-on-azure-vm-eastus --location eastus
+>> az deployment group create --name rollout1 -g rg-jenkins-on-azure-vm-eastus --template-file arm-template.json -o yaml
 
 The azure resource manager uses the arm template to provision resources needed for the vm to run, resources include
 -Virtual Network, publicIpAddress, NetworkSecurityGroups, and NetworkInterfaces, from Microsoft.Network namespace
