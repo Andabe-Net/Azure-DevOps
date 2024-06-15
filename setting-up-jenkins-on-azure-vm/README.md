@@ -48,6 +48,8 @@ The azure resource manager uses the arm template to provision resources needed f
 
 #Done!!! 
 
+DO NOT FORGET TO CLEAN UP RESOURCES!!!!
+
 
 
 
