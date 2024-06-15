@@ -23,6 +23,7 @@ The azure resource manager uses the arm template to provision resources needed f
   a particular port
     
 #after connecting to vm with ssh
+
 #set up jenkins
 
     first install java runtime
