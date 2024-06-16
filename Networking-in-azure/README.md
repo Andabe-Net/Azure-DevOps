@@ -59,7 +59,7 @@ In the network address  10.0.0.0/24, for example,
 
  for device addresses and  10.0.255.255 for broadcast address.
 
- So,  10.0.0.0/16 is a larger network compared to  10.0.0.0/16
+ So,  10.0.0.0/16 is a larger network compared to  10.0.0.0/24
 
  Devices are attached to a network via their network interfaces, so that the location of the device in the network is the location of its network 
 
