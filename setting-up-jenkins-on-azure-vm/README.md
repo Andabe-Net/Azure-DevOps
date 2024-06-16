@@ -11,9 +11,9 @@ the azure resource manager tools VS code extension."
 - az deployment group create --name rollout1 -g rg-jenkins-on-azure-vm-eastus --template-file arm-template.json -o yaml
 
 The azure resource manager uses the arm template to provision resources needed for the vm to run, resources include
--Virtual Network, publicIpAddress, NetworkSecurityGroups, and NetworkInterfaces, from Microsoft.Network namespace
--storage account, from Microsoft.Storage namespace
--virtual machine instance itself to run in the virtual Network, from Microsoft.Compute namespace
+- Virtual Network, publicIpAddress, NetworkSecurityGroups, and NetworkInterfaces, from Microsoft.Network namespace
+- OS Disk, storage account, from Microsoft.Storage namespace
+- virtual machine instance itself to run in the virtual Network, from Microsoft.Compute namespace
 
 #architecture and connections
 
@@ -30,15 +30,21 @@ The azure resource manager uses the arm template to provision resources needed f
 #set up jenkins
 
     first install java runtime
+
         update package list
             >> sudo apt update
         Add the OpenJDK PPA (Personal Package Archive)
             >> sudo add-apt-repository ppa:openjdk-r/ppa
         install java
-            >> sudo apt install openjdk-17-jdk
+            >> sudo apt install openjdk-11-jdk
+            
     Install jenkins
-        >> sudo apt install jenkins
+
+        https://www.jenkins.io/doc/book/installing/linux/
+
 #access jenkins
+
+    All traffic from the internet will be blocked by default. Only port 22 for ssh is allowed access.
 
     -create an inbound port rule in the network security group of the subnet that allows inbound traffic to port  8080 where jenkin runs
     -copy the public ip address of the virtual machine to access jenkins on port 8080
@@ -48,7 +54,10 @@ The azure resource manager uses the arm template to provision resources needed f
 
 #Done!!! 
 
+
 DO NOT FORGET TO CLEAN UP RESOURCES!!!!
+
+- az group delete --name rg-jenkins-on-azure-vm-eastus
 
 
 
