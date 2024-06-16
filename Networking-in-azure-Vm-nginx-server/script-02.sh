@@ -16,7 +16,7 @@ else
 fi
 
 #deploy template
-echo 'deploying template to create Vm within Virtual Network and subnet...'
+echo 'deploying '$TEMPLATE' to create Vm within Virtual Network and subnet...'
 az deployment group create --name $DEPLOYMENT_NAME -g $RESOURCE_GROUP --template-file $TEMPLATE -o yaml
 
 echo '###Done'

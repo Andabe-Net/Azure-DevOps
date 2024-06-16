@@ -8,10 +8,10 @@
 
 - use the Virtual machine e.g install nginx server
 
-- allow inbound traffic from the firewall to the Network security group attached to the subnet of the VM
-    (not necessary since resources in the same Vnet can comunicate with each other across subnets)
+- allow inbound traffic from the firewall to the VM using the Network security group attached to the subnet of the VM
+    (not necessary since resources in the same Vnet can communicate with each other across subnets)
 
-- access the Vm in the network using DNAT(Destination Network Address Translation) through a firewall
+- access the Vm in the network using DNAT(Destination Network Address Translation) through a firewall that has a public Ip attached.
 
 In this project, the aim is to practice networking in azure by setting up a private virtual network protected
 
@@ -74,5 +74,7 @@ In the network address  10.0.0.0/24, for example,
  in the Vm settings when deployed, to be connected with the vm via RDP or SSH
 
  The firewall would have to be attached to a public address to enable DNAT from the internet to the network resources
+
+ by adding rules for allowed addresses or range of addresses to access resources in the network.
 
  
