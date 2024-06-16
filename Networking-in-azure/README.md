@@ -9,7 +9,7 @@
 - use the Virtual machine e.g install nginx server
 
 - allow inbound traffic from the firewall to the Network security group attached to the subnet of the VM
-    (not necessary since resources in the same Vnet can comunicate with each other across subnets)
+    (not necessary since resources in the same Vnet can communicate with each other across subnets)
 
 - access the Vm in the network using DNAT(Destination Network Address Translation) through a firewall
 
@@ -27,9 +27,9 @@ virtual Network and virtual machine in the case that you forgot to run script-01
 
 Remember to remove the PublicIp field from the network interface(that will be attached to the vm) in arm-template when 
 
-configuring the arm-vm template to disable public access to vm. The public ip address will be attached to Bastion
+configuring the arm-vm template to disable public access to vm. The public ip address will be attached to Bastion.
 
-To associate a virtual network with a Bastion, it must contain a subnet with name AzureBastionSubnet and a prefix of at least /26
+To associate a virtual network with a Bastion, it must contain a subnet with name AzureBastionSubnet and a prefix of at least /26.
 
 The virtual network must also have a subnet named AzureFirewallSubnet.
 
@@ -67,12 +67,12 @@ In the network address  10.0.0.0/24, for example,
 
  A Network interfaces(i.e devices) may be assigned a public address.
 
- The bastion is attached a public ip to enable access
+ The bastion is attached a public ip to enable access.
 
  Bastion allows web based RDP access to vnet VM and exists within AzureBastionSubnet in the network. Bastion can be found
 
- in the Vm settings when deployed, to be connected with the vm via RDP or SSH
+ in the Vm settings when deployed, to be connected with the vm via RDP or SSH.
 
- The firewall would have to be attached to a public address to enable DNAT from the internet to the network resources
+ The firewall would have to be attached to a public address to enable DNAT from the internet to the network resources.
 
  
