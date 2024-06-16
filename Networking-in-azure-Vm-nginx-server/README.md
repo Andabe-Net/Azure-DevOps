@@ -19,7 +19,7 @@ by a firewall, and setting up subnets within the network, deploying a virtual ma
 
 setting up nginx server within the virtual machine by using azure bastion to access the virtual machine.
 
-"Note: We can deploy a vm in a subnet using an arm-template that creates a new network. But in this example,
+"Note: VM can be deployed in a subnet using an arm-template that creates a new network. But in this example,
 
 I tried to deploy to an already existing virtual network and subnet." Script-02.sh will create a new resource group,
 
@@ -27,9 +27,9 @@ virtual Network and virtual machine in the case that you forgot to run script-01
 
 Remember to remove the PublicIp field from the network interface(that will be attached to the vm) in arm-template when 
 
-configuring the arm-vm template to disable public access to vm. The public ip address will be attached to Bastion
+configuring the arm-vm template to disable public access to vm. The public ip address will be attached to Bastion.
 
-To associate a virtual network with a Bastion, it must contain a subnet with name AzureBastionSubnet and a prefix of at least /26
+To associate a virtual network with a Bastion, it must contain a subnet with name AzureBastionSubnet and a prefix of at least /26.
 
 The virtual network must also have a subnet named AzureFirewallSubnet.
 
@@ -59,7 +59,7 @@ In the network address  10.0.0.0/24, for example,
 
  for device addresses and  10.0.255.255 for broadcast address.
 
- So,  10.0.0.0/16 is a larger network compared to  10.0.0.0/16
+ So,  10.0.0.0/16 is a larger network compared to  10.0.0.0/24
 
  Devices are attached to a network via their network interfaces, so that the location of the device in the network is the location of its network 
 
@@ -67,11 +67,11 @@ In the network address  10.0.0.0/24, for example,
 
  A Network interfaces(i.e devices) may be assigned a public address.
 
- The bastion is attached a public ip to enable access
+ The bastion is attached a public ip to enable access.
 
  Bastion allows web based RDP access to vnet VM and exists within AzureBastionSubnet in the network. Bastion can be found
 
- in the Vm settings when deployed, to be connected with the vm via RDP or SSH
+ in the Vm settings when deployed, to be connected with the vm via RDP or SSH.
 
  The firewall would have to be attached to a public address to enable DNAT from the internet to the network resources
 
