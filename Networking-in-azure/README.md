@@ -19,7 +19,7 @@ by a firewall, and setting up subnets within the network, deploying a virtual ma
 
 setting up nginx server within the virtual machine by using azure bastion to access the virtual machine.
 
-"Note: We can deploy a vm in a subnet using an arm-template that creates a new network. But in this example,
+"Note: VM can be deployed in a subnet using an arm-template that creates a new network. But in this example,
 
 I tried to deploy to an already existing virtual network and subnet." Script-02.sh will create a new resource group,
 
