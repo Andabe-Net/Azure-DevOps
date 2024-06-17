@@ -27,7 +27,7 @@ This is what I embarked on...
 
     - download the blob from the container to the machine
 
-2   MOUNT BLOB STORAGE CONTAINER IN A VIRTUAL NETWORK AS A FILE SYSTEM ON A VIRTUAL MACHINE IN ANOTHER NETWORK
+2   MOUNT BLOB STORAGE CONTAINER FROM A VIRTUAL NETWORK AS A FILE SYSTEM ON A VIRTUAL MACHINE IN ANOTHER NETWORK
 
     Mounting Azure Blob storage on linux Vm can be achived using BlobFuse, which allows access to the storage as though it were a file system.
 
