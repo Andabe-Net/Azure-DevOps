@@ -1,4 +1,12 @@
-#concepts and more
+#CONCEPTS AND MORE
+
+Resources in one virtual network do not have access to resources in another virtual network unless the target resource enables public
+
+access or dedicated access permission from the incoming network. Adding permission for the incoming virtual network subnet to access a
+
+storage account in another network, a remote device(VM) in that subnet can access the storage account, with the traffic flowing between
+
+the target network and the incoming network to create storage containers, upload and download blobs and mount storage on the remote resource.
 
 This is what I embarked on...
 
