@@ -51,4 +51,4 @@ This is what I embarked on...
      To create storage containers, upload and download blobs, or mount storage on a VM, see "azure-VM-and-Storage-vNet-to-vNet-connection" project.
 
 
-To connect privately with your private endpoint, you need a DNS record. We recommend that you integrate your private endpoint with a private DNS zone.
+To connect privately with the private endpoint, a DNS record is needed. It is recommended to integrate the private endpoint with a private DNS zone.
